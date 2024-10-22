@@ -13,29 +13,44 @@
       crossorigin="anonymous"
     />
 
-    <title>Cadastre-me!</title>
+    <title>Cadastre-se!</title>
   </head>
   <body>
     <nav
-      style="background-color: darkolivegreen !important"
-      class="navbar navbar-light bg-light"
+      style="background-color: #63d8db !important"
+      class="navbar navbar-expand-lg navbar-light bg-light"
     >
       <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'home' %}">
           <img
-            src="https://image.similarpng.com/very-thumbnail/2021/05/Modern-logo-design-template-on-transparent-PNG.png"
+            src="https://criticalhits.com.br/wp-content/uploads/2024/06/Hatsune-Miku.png"
             alt=""
             width="30"
             height="24"
             class="d-inline-block align-text-top"
           />
-
-          Cadastre-me!
+          Cadastre-se!
         </a>
+        <!-- Novo link para a página "Chat" -->
+        <a class="nav-link" href="{% url 'chat' %}">Chat</a>
       </div>
     </nav>
 
-    {% block conteudo %} {% endblock %}
+    <main class="container my-4">{% block conteudo %} {% endblock %}</main>
+
+    <div style="text-align: center" class="container">
+      <br />
+      {% if user_name %}
+      <h1>Olá, {{ user_name }}!</h1>
+      {% else %}
+      <h1>Bem-vindos!</h1>
+      {% endif %}
+      <img
+        src="https://static.miraheze.org/projectsekaiwiki/thumb/9/93/Hatsune_Miku.png/630px-Hatsune_Miku.png"
+        alt="Nutri Pyramid"
+        style="width: 16%; height: auto"
+      />
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

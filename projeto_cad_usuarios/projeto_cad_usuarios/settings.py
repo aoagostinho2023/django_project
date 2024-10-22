@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-gm*ni0iamk8s)v_=)(42=rk^m27+kffar11vigp+2(x+=r97p3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['novo-projeto-django.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -74,6 +74,7 @@ WSGI_APPLICATION = 'projeto_cad_usuarios.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+
 """
 DATABASES = {
     'default': {
@@ -85,14 +86,16 @@ DATABASES = {
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_projeto',
-        'USER': 'usr_projeto1',
-        'PASSWORD': 'pass_projeto',
-        'HOST': 'localhost',  # ou o endereço do servidor de banco de dados
-        'PORT': '3306',  # porta padrão do MySQL
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'banco_django_app',
+        'USER': 'aoagostinho',
+        'PASSWORD': 'lLAsD2fiaRBbiGMLnZmYqz4gCetNLyWw',
+        'HOST': 'dpg-cqugmrbv2p9s73a96ifg-a',  # ou o endereço do servidor de banco de dados
+        'PORT': '5432',  # porta padrão do MySQL
     }
 }
+
+
 
 
 # Password validation
